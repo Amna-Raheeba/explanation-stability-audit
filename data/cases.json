@@ -1,0 +1,3346 @@
+[
+  {
+    "case_id": "H-01",
+    "domain": "health",
+    "question": "Should patient Aisha be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Temperature 39.2C. This is a high fever for patient Aisha, and the risk is severe.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: heart rate 124 bpm. Patient Aisha has a high heart rate, and the risk is severe.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Aisha reports a severe headache. The headache is severe and the patient should be checked.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Aisha has a history of asthma. Asthma should be monitored, so the patient needs watching.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Aisha feels slightly better today. The fever is high but the patient feels better.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: heat 39.2C. This is a elevated fever for",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: heart rate 124 bpm. patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H3 supports escalate: patient Aisha reports a serious headache. The headache",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-02",
+    "domain": "health",
+    "question": "Should patient Bilal be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Bilal reports chest pain. The pain is severe and the patient should be checked at once.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: oxygen saturation 91 percent. Patient Bilal has low oxygen, and the risk is high.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Bilal had an ECG. The ECG is normal, so the patient should be monitored.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Bilal is 68 years old. Older patients carry a high risk and should be checked.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Bilal has no fever. The patient feels calm and the temperature is low.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: patient Bilal reports chest pain. The pain is",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: oxygen saturation 91 percent. patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H4 supports escalate: patient Bilal is 68 years old. Older patients",
+        "evidence_ids": [
+          "H4"
+        ],
+        "confidence": 0.7,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-03",
+    "domain": "health",
+    "question": "Should patient Chen be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Chen has a mild cough. The cough started 2 days ago and the patient feels well.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H2",
+        "text": "Temperature 37.1C. The temperature is low and normal for patient Chen.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Heart rate 78 bpm. The heart rate is normal, so patient Chen can be watched at home.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Chen has no chronic illness. The patient should be checked again only if symptoms increase.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Chen has a mild sore throat. The throat should be monitored for a few days.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "routine",
+    "gold_claims": [
+      {
+        "text": "H1 supports routine: patient Chen has a mild cough. The cough",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      },
+      {
+        "text": "H2 supports routine: heat 37.1C. The heat is low and normal",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "routine"
+      },
+      {
+        "text": "H3 supports routine: Heart rate 78 bpm. The heart rate is",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      },
+      {
+        "text": "H4 supports routine: patient Chen has no chronic illness. The patient",
+        "evidence_ids": [
+          "H4"
+        ],
+        "confidence": 0.7,
+        "stance": "routine"
+      }
+    ]
+  },
+  {
+    "case_id": "H-04",
+    "domain": "health",
+    "question": "Should patient Dania be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Dania has redness around the wound. The redness is spreading, so the wound should be monitored.",
+        "supports": "monitor",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Temperature 38.1C. The temperature is high for patient Dania, so the patient should be watched.",
+        "supports": "monitor",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H3",
+        "text": "Patient Dania reports moderate pain. The pain should be monitored and the patient checked again.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "The nurse found the wound clean. Patient Dania has a clean wound, so routine care is enough.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Dania has no discharge. There is no discharge, so the risk is low.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "monitor",
+    "gold_claims": [
+      {
+        "text": "H1 supports monitor: patient Dania has redness around the wound. The",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "monitor"
+      },
+      {
+        "text": "H2 supports monitor: heat 38.1C. The heat is elevated for patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.8,
+        "stance": "monitor"
+      },
+      {
+        "text": "H3 supports monitor: patient Dania reports moderate pain. The pain ought",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "monitor"
+      }
+    ]
+  },
+  {
+    "case_id": "H-05",
+    "domain": "health",
+    "question": "Should patient Emeka be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Blood glucose 320 mg/dL. Patient Emeka has a high glucose level, and the risk is severe.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: ketones are present. Patient Emeka has ketones, so the patient should be checked at once.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Emeka feels nauseous. The nausea is severe and the patient should be examined.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Emeka took insulin. The insulin should be monitored, so the patient needs watching.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Emeka is alert and talking. The patient is alert, so the risk is lower.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: Blood glucose 320 mg/dL. patient Emeka has a",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: ketones are present. patient Emeka",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H3 supports escalate: patient Emeka feels nauseous. The nausea is serious",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-06",
+    "domain": "health",
+    "question": "Should patient Fatima be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Temperature 38.5C. Patient Fatima has a high fever, so the patient should be monitored.",
+        "supports": "monitor",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Patient Fatima has ear pain. The ear pain is severe and the patient should be checked.",
+        "supports": "monitor",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H3",
+        "text": "Patient Fatima is drinking fluids. The patient drinks well, so routine care is enough.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Fatima has no rash. There is no rash, so the risk is low for the patient.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Fatima slept restlessly. The sleep was restless, so the patient should be monitored.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "monitor",
+    "gold_claims": [
+      {
+        "text": "H1 supports monitor: heat 38.5C. patient Fatima has a elevated fever,",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "monitor"
+      },
+      {
+        "text": "H2 supports monitor: patient Fatima has ear pain. The ear pain",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.8,
+        "stance": "monitor"
+      },
+      {
+        "text": "H5 supports monitor: patient Fatima slept restlessly. The sleep was restless,",
+        "evidence_ids": [
+          "H5"
+        ],
+        "confidence": 0.7,
+        "stance": "monitor"
+      }
+    ]
+  },
+  {
+    "case_id": "H-07",
+    "domain": "health",
+    "question": "Should patient Gul be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Gul fell from a chair. The fall was low risk and the patient should be checked once.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H2",
+        "text": "No head strike occurred. Patient Gul has no head injury, so the risk is low.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Gul is alert. The patient is alert and talking, so routine care is enough.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Gul has a bruise on the knee. The bruise should be monitored for a few days.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Gul walks with help. The patient should be watched while walking.",
+        "supports": "monitor",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "routine",
+    "gold_claims": [
+      {
+        "text": "H1 supports routine: patient Gul fell from a chair. The fall",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      },
+      {
+        "text": "H2 supports routine: No head strike occurred. patient Gul has no",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "routine"
+      },
+      {
+        "text": "H3 supports routine: patient Gul is alert. The patient is alert",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      }
+    ]
+  },
+  {
+    "case_id": "H-08",
+    "domain": "health",
+    "question": "Should patient Hassan be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Wheeze is audible. Patient Hassan has a severe wheeze, so the patient should be checked at once.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: oxygen saturation 93 percent. Patient Hassan has low oxygen, and the risk is high.",
+        "supports": "escalate",
+        "weight": 1.5,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "The inhaler is not helping. Patient Hassan used the inhaler, but the wheeze is still severe.",
+        "supports": "escalate",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Hassan has a history of COPD. COPD carries a high risk and should be monitored.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Hassan speaks in full sentences. The patient speaks well, so the risk is lower.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: Wheeze is audible. patient Hassan has a serious",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: oxygen saturation 93 percent. patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H3 supports escalate: The inhaler is not helping. patient Hassan used",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "escalate"
+      },
+      {
+        "text": "H4 supports escalate: patient Hassan has a history of COPD. COPD",
+        "evidence_ids": [
+          "H4"
+        ],
+        "confidence": 0.7,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-09",
+    "domain": "health",
+    "question": "Should patient Iqra be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Temperature 39.2C. This is a high fever for patient Iqra, and the risk is severe.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: heart rate 124 bpm. Patient Iqra has a high heart rate, and the risk is severe.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Iqra reports a severe headache. The headache is severe and the patient should be checked.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Iqra has a history of asthma. Asthma should be monitored, so the patient needs watching.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Iqra feels slightly better today. The fever is high but the patient feels better.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: heat 39.2C. This is a elevated fever for",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: heart rate 124 bpm. patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H3 supports escalate: patient Iqra reports a serious headache. The headache",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-10",
+    "domain": "health",
+    "question": "Should patient Junaid be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Junaid reports chest pain. The pain is severe and the patient should be checked at once.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: oxygen saturation 91 percent. Patient Junaid has low oxygen, and the risk is high.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Junaid had an ECG. The ECG is normal, so the patient should be monitored.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Junaid is 68 years old. Older patients carry a high risk and should be checked.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Junaid has no fever. The patient feels calm and the temperature is low.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: patient Junaid reports chest pain. The pain is",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: oxygen saturation 91 percent. patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H4 supports escalate: patient Junaid is 68 years old. Older patients",
+        "evidence_ids": [
+          "H4"
+        ],
+        "confidence": 0.7,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-11",
+    "domain": "health",
+    "question": "Should patient Kiran be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Kiran has a mild cough. The cough started 2 days ago and the patient feels well.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H2",
+        "text": "Temperature 37.1C. The temperature is low and normal for patient Kiran.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Heart rate 78 bpm. The heart rate is normal, so patient Kiran can be watched at home.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Kiran has no chronic illness. The patient should be checked again only if symptoms increase.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Kiran has a mild sore throat. The throat should be monitored for a few days.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "routine",
+    "gold_claims": [
+      {
+        "text": "H1 supports routine: patient Kiran has a mild cough. The cough",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      },
+      {
+        "text": "H2 supports routine: heat 37.1C. The heat is low and normal",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "routine"
+      },
+      {
+        "text": "H3 supports routine: Heart rate 78 bpm. The heart rate is",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      },
+      {
+        "text": "H4 supports routine: patient Kiran has no chronic illness. The patient",
+        "evidence_ids": [
+          "H4"
+        ],
+        "confidence": 0.7,
+        "stance": "routine"
+      }
+    ]
+  },
+  {
+    "case_id": "H-12",
+    "domain": "health",
+    "question": "Should patient Laila be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Laila has redness around the wound. The redness is spreading, so the wound should be monitored.",
+        "supports": "monitor",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Temperature 38.1C. The temperature is high for patient Laila, so the patient should be watched.",
+        "supports": "monitor",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H3",
+        "text": "Patient Laila reports moderate pain. The pain should be monitored and the patient checked again.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "The nurse found the wound clean. Patient Laila has a clean wound, so routine care is enough.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Laila has no discharge. There is no discharge, so the risk is low.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "monitor",
+    "gold_claims": [
+      {
+        "text": "H1 supports monitor: patient Laila has redness around the wound. The",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "monitor"
+      },
+      {
+        "text": "H2 supports monitor: heat 38.1C. The heat is elevated for patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.8,
+        "stance": "monitor"
+      },
+      {
+        "text": "H3 supports monitor: patient Laila reports moderate pain. The pain ought",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "monitor"
+      }
+    ]
+  },
+  {
+    "case_id": "H-13",
+    "domain": "health",
+    "question": "Should patient Musa be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Blood glucose 320 mg/dL. Patient Musa has a high glucose level, and the risk is severe.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: ketones are present. Patient Musa has ketones, so the patient should be checked at once.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Musa feels nauseous. The nausea is severe and the patient should be examined.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Musa took insulin. The insulin should be monitored, so the patient needs watching.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Musa is alert and talking. The patient is alert, so the risk is lower.",
+        "supports": "routine",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: Blood glucose 320 mg/dL. patient Musa has a",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: ketones are present. patient Musa",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H3 supports escalate: patient Musa feels nauseous. The nausea is serious",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "H-14",
+    "domain": "health",
+    "question": "Should patient Nadia be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Temperature 38.5C. Patient Nadia has a high fever, so the patient should be monitored.",
+        "supports": "monitor",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Patient Nadia has ear pain. The ear pain is severe and the patient should be checked.",
+        "supports": "monitor",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H3",
+        "text": "Patient Nadia is drinking fluids. The patient drinks well, so routine care is enough.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Nadia has no rash. There is no rash, so the risk is low for the patient.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Nadia slept restlessly. The sleep was restless, so the patient should be monitored.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "monitor",
+    "gold_claims": [
+      {
+        "text": "H1 supports monitor: heat 38.5C. patient Nadia has a elevated fever,",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "monitor"
+      },
+      {
+        "text": "H2 supports monitor: patient Nadia has ear pain. The ear pain",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.8,
+        "stance": "monitor"
+      },
+      {
+        "text": "H5 supports monitor: patient Nadia slept restlessly. The sleep was restless,",
+        "evidence_ids": [
+          "H5"
+        ],
+        "confidence": 0.7,
+        "stance": "monitor"
+      }
+    ]
+  },
+  {
+    "case_id": "H-15",
+    "domain": "health",
+    "question": "Should patient Omar be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Patient Omar fell from a chair. The fall was low risk and the patient should be checked once.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H2",
+        "text": "No head strike occurred. Patient Omar has no head injury, so the risk is low.",
+        "supports": "routine",
+        "weight": 1.5,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "Patient Omar is alert. The patient is alert and talking, so routine care is enough.",
+        "supports": "routine",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Omar has a bruise on the knee. The bruise should be monitored for a few days.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Omar walks with help. The patient should be watched while walking.",
+        "supports": "monitor",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "routine",
+    "gold_claims": [
+      {
+        "text": "H1 supports routine: patient Omar fell from a chair. The fall",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      },
+      {
+        "text": "H2 supports routine: No head strike occurred. patient Omar has no",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "routine"
+      },
+      {
+        "text": "H3 supports routine: patient Omar is alert. The patient is alert",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "routine"
+      }
+    ]
+  },
+  {
+    "case_id": "H-16",
+    "domain": "health",
+    "question": "Should patient Priya be escalated to urgent care?",
+    "evidence": [
+      {
+        "id": "H1",
+        "text": "Wheeze is audible. Patient Priya has a severe wheeze, so the patient should be checked at once.",
+        "supports": "escalate",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "H2",
+        "text": "Urgent care review: oxygen saturation 93 percent. Patient Priya has low oxygen, and the risk is high.",
+        "supports": "escalate",
+        "weight": 1.5,
+        "strength": 0.9
+      },
+      {
+        "id": "H3",
+        "text": "The inhaler is not helping. Patient Priya used the inhaler, but the wheeze is still severe.",
+        "supports": "escalate",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "H4",
+        "text": "Patient Priya has a history of COPD. COPD carries a high risk and should be monitored.",
+        "supports": "escalate",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "H5",
+        "text": "Patient Priya speaks in full sentences. The patient speaks well, so the risk is lower.",
+        "supports": "monitor",
+        "weight": 1.0,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "escalate",
+    "gold_claims": [
+      {
+        "text": "H1 supports escalate: Wheeze is audible. patient Priya has a serious",
+        "evidence_ids": [
+          "H1"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H2 supports escalate: immediate care review: oxygen saturation 93 percent. patient",
+        "evidence_ids": [
+          "H2"
+        ],
+        "confidence": 0.9,
+        "stance": "escalate"
+      },
+      {
+        "text": "H3 supports escalate: The inhaler is not helping. patient Priya used",
+        "evidence_ids": [
+          "H3"
+        ],
+        "confidence": 0.8,
+        "stance": "escalate"
+      },
+      {
+        "text": "H4 supports escalate: patient Priya has a history of COPD. COPD",
+        "evidence_ids": [
+          "H4"
+        ],
+        "confidence": 0.7,
+        "stance": "escalate"
+      }
+    ]
+  },
+  {
+    "case_id": "P-01",
+    "domain": "phm",
+    "question": "Should turbine T-7 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "turbine T-7 vibration increased 40 percent. The vibration is high and the shaking should be checked.",
+        "supports": "schedule",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "turbine T-7 temperature is normal. The heat is low, so the asset can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "Remaining life estimate 320 hours. The estimate is high, so turbine T-7 maintenance can be scheduled.",
+        "supports": "schedule",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Last inspection of turbine T-7 was clean. The inspection found no cause for urgent maintenance.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Noise was reported from turbine T-7. The noise should be monitored and the vibration checked.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "schedule",
+    "gold_claims": [
+      {
+        "text": "P1 supports schedule: turbine T-7 shaking increased 40 percent. The shaking",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "schedule"
+      },
+      {
+        "text": "P3 supports schedule: Remaining life estimate 320 hours. The estimate is",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "schedule"
+      },
+      {
+        "text": "P5 supports schedule: Noise was reported from turbine T-7. The noise",
+        "evidence_ids": [
+          "P5"
+        ],
+        "confidence": 0.7,
+        "stance": "schedule"
+      }
+    ]
+  },
+  {
+    "case_id": "P-02",
+    "domain": "phm",
+    "question": "Should pump P-3 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Bearing temperature 95C. The heat is high for pump P-3, and the risk of failure is severe.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Vibration is severe. The shaking is severe for pump P-3, so maintenance should happen now.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "Leakage is visible on pump P-3. The leak should be checked and the asset taken offline.",
+        "supports": "offline_now",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "A spare for pump P-3 is available. The spare makes scheduled maintenance possible.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Production has a deadline. The deadline means pump P-3 should keep running if possible.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "offline_now",
+    "gold_claims": [
+      {
+        "text": "P1 supports offline_now: Bearing heat 95C. The heat is elevated for",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P2 supports offline_now: shaking is serious The shaking is serious for",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P3 supports offline_now: Leakage is visible on pump P-3. The leak",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      }
+    ]
+  },
+  {
+    "case_id": "P-03",
+    "domain": "phm",
+    "question": "Should compressor C-12 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Belt wear is within limits. The wear is low for compressor C-12, so maintenance is not urgent.",
+        "supports": "keep_running",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Motor current is normal. The current is low and normal, so compressor C-12 can keep running.",
+        "supports": "keep_running",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "No noise from compressor C-12. The asset is quiet, so the risk is low.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Next service for compressor C-12 is in 2 weeks. The service should be scheduled as planned.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Minor dust on compressor C-12. The dust should be monitored but does not cause failure.",
+        "supports": "schedule",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "keep_running",
+    "gold_claims": [
+      {
+        "text": "P1 supports keep_running: Belt wear is within limits. The wear is",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P2 supports keep_running: Motor current is normal. The current is low",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P3 supports keep_running: No noise from compressor C-12. The asset is",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      }
+    ]
+  },
+  {
+    "case_id": "P-04",
+    "domain": "phm",
+    "question": "Should motor M-5 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Pressure dropped 12 percent. The pressure is low for motor M-5, so maintenance should be scheduled.",
+        "supports": "schedule",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "The filter is clogged. A clogged filter can cause a pressure drop, so motor M-5 should be checked.",
+        "supports": "schedule",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "Temperature is slightly high. The heat is slightly high for motor M-5, so it should be monitored.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P4",
+        "text": "Output is still in spec. motor M-5 output is normal, so it can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P5",
+        "text": "No leaks on motor M-5. There is no leak, so the risk is low.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "schedule",
+    "gold_claims": [
+      {
+        "text": "P1 supports schedule: Pressure dropped 12 percent. The pressure is low",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "schedule"
+      },
+      {
+        "text": "P2 supports schedule: The filter is clogged. A clogged filter can",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.8,
+        "stance": "schedule"
+      },
+      {
+        "text": "P3 supports schedule: heat is slightly elevated The heat is slightly",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.7,
+        "stance": "schedule"
+      }
+    ]
+  },
+  {
+    "case_id": "P-05",
+    "domain": "phm",
+    "question": "Should gearbox G-9 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Insulation resistance 0.4 MOhm. The resistance is low for gearbox G-9, and the risk of failure is severe.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "gearbox G-9 tripped twice. The trips show a severe fault, so maintenance should happen now.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "Burning smell from gearbox G-9. The smell is a severe warning, so the asset should be checked at once.",
+        "supports": "offline_now",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Load on gearbox G-9 is light. A light load means scheduled maintenance is possible.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Backup motor is ready. The backup means gearbox G-9 can be taken offline for maintenance.",
+        "supports": "schedule",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "offline_now",
+    "gold_claims": [
+      {
+        "text": "P1 supports offline_now: Insulation resistance 0.4 MOhm. The resistance is low",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P2 supports offline_now: gearbox G-9 tripped twice. The trips indicate a",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P3 supports offline_now: Burning smell from gearbox G-9. The smell is",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      }
+    ]
+  },
+  {
+    "case_id": "P-06",
+    "domain": "phm",
+    "question": "Should fan F-2 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Iron particles are rising in the oil. The particles show wear in fan F-2, so maintenance should be scheduled.",
+        "supports": "schedule",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Oil is dark. Dark oil can cause wear, so fan F-2 should be checked soon.",
+        "supports": "schedule",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "Vibration is normal. The shaking is low for fan F-2, so it can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Temperature is normal. The heat is low, so fan F-2 can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Filter was changed recently. The filter is new, so the risk is low for fan F-2.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "schedule",
+    "gold_claims": [
+      {
+        "text": "P1 supports schedule: Iron particles are rising in the oil. The",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "schedule"
+      },
+      {
+        "text": "P2 supports schedule: Oil is dark. Dark oil can cause wear,",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.8,
+        "stance": "schedule"
+      }
+    ]
+  },
+  {
+    "case_id": "P-07",
+    "domain": "phm",
+    "question": "Should hydraulic unit H-8 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Imbalance 2.1 mm/s. The imbalance is low for hydraulic unit H-8 and within the limit.",
+        "supports": "keep_running",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P2",
+        "text": "Within ISO limit. hydraulic unit H-8 is within the limit, so it can keep running.",
+        "supports": "keep_running",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "No temperature rise. The heat is low for hydraulic unit H-8, so the risk is low.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Slight hum from hydraulic unit H-8. The hum should be monitored and the vibration checked.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Blades were inspected. The blades are fine, so hydraulic unit H-8 can keep running.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "keep_running",
+    "gold_claims": [
+      {
+        "text": "P1 supports keep_running: Imbalance 2.1 mm/s. The imbalance is low for",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P2 supports keep_running: Within ISO limit. hydraulic unit H-8 is within",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P3 supports keep_running: No heat rise. The heat is low for",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      }
+    ]
+  },
+  {
+    "case_id": "P-08",
+    "domain": "phm",
+    "question": "Should conveyor K-4 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Leak at the seal. The leak is severe for conveyor K-4, so maintenance should happen now.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Pressure is fluctuating. The pressure is unstable for conveyor K-4, so the risk of failure is high.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "Fluid level is dropping. The level is low, so conveyor K-4 should be checked at once.",
+        "supports": "offline_now",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Safety risk is present. The risk is severe, so conveyor K-4 should be taken offline.",
+        "supports": "offline_now",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P5",
+        "text": "Production can pause. The pause means scheduled maintenance for conveyor K-4 is possible.",
+        "supports": "schedule",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "offline_now",
+    "gold_claims": [
+      {
+        "text": "P1 supports offline_now: Leak at the seal. The leak is serious",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P2 supports offline_now: Pressure is fluctuating. The pressure is unstable for",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P3 supports offline_now: Fluid level is dropping. The level is low",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P4 supports offline_now: Safety danger is present. The danger is serious",
+        "evidence_ids": [
+          "P4"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      }
+    ]
+  },
+  {
+    "case_id": "P-09",
+    "domain": "phm",
+    "question": "Should turbine T-11 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "turbine T-11 vibration increased 40 percent. The vibration is high and the shaking should be checked.",
+        "supports": "schedule",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "turbine T-11 temperature is normal. The heat is low, so the asset can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "Remaining life estimate 320 hours. The estimate is high, so turbine T-11 maintenance can be scheduled.",
+        "supports": "schedule",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Last inspection of turbine T-11 was clean. The inspection found no cause for urgent maintenance.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Noise was reported from turbine T-11. The noise should be monitored and the vibration checked.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "schedule",
+    "gold_claims": [
+      {
+        "text": "P1 supports schedule: turbine T-11 shaking increased 40 percent. The shaking",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "schedule"
+      },
+      {
+        "text": "P3 supports schedule: Remaining life estimate 320 hours. The estimate is",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "schedule"
+      },
+      {
+        "text": "P5 supports schedule: Noise was reported from turbine T-11. The noise",
+        "evidence_ids": [
+          "P5"
+        ],
+        "confidence": 0.7,
+        "stance": "schedule"
+      }
+    ]
+  },
+  {
+    "case_id": "P-10",
+    "domain": "phm",
+    "question": "Should pump P-8 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Bearing temperature 95C. The heat is high for pump P-8, and the risk of failure is severe.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Vibration is severe. The shaking is severe for pump P-8, so maintenance should happen now.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "Leakage is visible on pump P-8. The leak should be checked and the asset taken offline.",
+        "supports": "offline_now",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "A spare for pump P-8 is available. The spare makes scheduled maintenance possible.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Production has a deadline. The deadline means pump P-8 should keep running if possible.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "offline_now",
+    "gold_claims": [
+      {
+        "text": "P1 supports offline_now: Bearing heat 95C. The heat is elevated for",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P2 supports offline_now: shaking is serious The shaking is serious for",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P3 supports offline_now: Leakage is visible on pump P-8. The leak",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      }
+    ]
+  },
+  {
+    "case_id": "P-11",
+    "domain": "phm",
+    "question": "Should compressor C-4 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Belt wear is within limits. The wear is low for compressor C-4, so maintenance is not urgent.",
+        "supports": "keep_running",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Motor current is normal. The current is low and normal, so compressor C-4 can keep running.",
+        "supports": "keep_running",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "No noise from compressor C-4. The asset is quiet, so the risk is low.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Next service for compressor C-4 is in 2 weeks. The service should be scheduled as planned.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Minor dust on compressor C-4. The dust should be monitored but does not cause failure.",
+        "supports": "schedule",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "keep_running",
+    "gold_claims": [
+      {
+        "text": "P1 supports keep_running: Belt wear is within limits. The wear is",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P2 supports keep_running: Motor current is normal. The current is low",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P3 supports keep_running: No noise from compressor C-4. The asset is",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      }
+    ]
+  },
+  {
+    "case_id": "P-12",
+    "domain": "phm",
+    "question": "Should motor M-9 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Pressure dropped 12 percent. The pressure is low for motor M-9, so maintenance should be scheduled.",
+        "supports": "schedule",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "The filter is clogged. A clogged filter can cause a pressure drop, so motor M-9 should be checked.",
+        "supports": "schedule",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "Temperature is slightly high. The heat is slightly high for motor M-9, so it should be monitored.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P4",
+        "text": "Output is still in spec. motor M-9 output is normal, so it can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P5",
+        "text": "No leaks on motor M-9. There is no leak, so the risk is low.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "schedule",
+    "gold_claims": [
+      {
+        "text": "P1 supports schedule: Pressure dropped 12 percent. The pressure is low",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "schedule"
+      },
+      {
+        "text": "P2 supports schedule: The filter is clogged. A clogged filter can",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.8,
+        "stance": "schedule"
+      },
+      {
+        "text": "P3 supports schedule: heat is slightly elevated The heat is slightly",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.7,
+        "stance": "schedule"
+      }
+    ]
+  },
+  {
+    "case_id": "P-13",
+    "domain": "phm",
+    "question": "Should gearbox G-2 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Insulation resistance 0.4 MOhm. The resistance is low for gearbox G-2, and the risk of failure is severe.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "gearbox G-2 tripped twice. The trips show a severe fault, so maintenance should happen now.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "Burning smell from gearbox G-2. The smell is a severe warning, so the asset should be checked at once.",
+        "supports": "offline_now",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Load on gearbox G-2 is light. A light load means scheduled maintenance is possible.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Backup motor is ready. The backup means gearbox G-2 can be taken offline for maintenance.",
+        "supports": "schedule",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "offline_now",
+    "gold_claims": [
+      {
+        "text": "P1 supports offline_now: Insulation resistance 0.4 MOhm. The resistance is low",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P2 supports offline_now: gearbox G-2 tripped twice. The trips indicate a",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P3 supports offline_now: Burning smell from gearbox G-2. The smell is",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      }
+    ]
+  },
+  {
+    "case_id": "P-14",
+    "domain": "phm",
+    "question": "Should fan F-7 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Iron particles are rising in the oil. The particles show wear in fan F-7, so maintenance should be scheduled.",
+        "supports": "schedule",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Oil is dark. Dark oil can cause wear, so fan F-7 should be checked soon.",
+        "supports": "schedule",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P3",
+        "text": "Vibration is normal. The shaking is low for fan F-7, so it can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Temperature is normal. The heat is low, so fan F-7 can keep running.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Filter was changed recently. The filter is new, so the risk is low for fan F-7.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "schedule",
+    "gold_claims": [
+      {
+        "text": "P1 supports schedule: Iron particles are rising in the oil. The",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "schedule"
+      },
+      {
+        "text": "P2 supports schedule: Oil is dark. Dark oil can cause wear,",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.8,
+        "stance": "schedule"
+      }
+    ]
+  },
+  {
+    "case_id": "P-15",
+    "domain": "phm",
+    "question": "Should hydraulic unit H-3 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Imbalance 2.1 mm/s. The imbalance is low for hydraulic unit H-3 and within the limit.",
+        "supports": "keep_running",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "P2",
+        "text": "Within ISO limit. hydraulic unit H-3 is within the limit, so it can keep running.",
+        "supports": "keep_running",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "No temperature rise. The heat is low for hydraulic unit H-3, so the risk is low.",
+        "supports": "keep_running",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Slight hum from hydraulic unit H-3. The hum should be monitored and the vibration checked.",
+        "supports": "schedule",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "P5",
+        "text": "Blades were inspected. The blades are fine, so hydraulic unit H-3 can keep running.",
+        "supports": "keep_running",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "keep_running",
+    "gold_claims": [
+      {
+        "text": "P1 supports keep_running: Imbalance 2.1 mm/s. The imbalance is low for",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P2 supports keep_running: Within ISO limit. hydraulic unit H-3 is within",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "keep_running"
+      },
+      {
+        "text": "P3 supports keep_running: No heat rise. The heat is low for",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "keep_running"
+      }
+    ]
+  },
+  {
+    "case_id": "P-16",
+    "domain": "phm",
+    "question": "Should conveyor K-9 be taken offline now for maintenance?",
+    "evidence": [
+      {
+        "id": "P1",
+        "text": "Leak at the seal. The leak is severe for conveyor K-9, so maintenance should happen now.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P2",
+        "text": "Pressure is fluctuating. The pressure is unstable for conveyor K-9, so the risk of failure is high.",
+        "supports": "offline_now",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "P3",
+        "text": "Fluid level is dropping. The level is low, so conveyor K-9 should be checked at once.",
+        "supports": "offline_now",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P4",
+        "text": "Safety risk is present. The risk is severe, so conveyor K-9 should be taken offline.",
+        "supports": "offline_now",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "P5",
+        "text": "Production can pause. The pause means scheduled maintenance for conveyor K-9 is possible.",
+        "supports": "schedule",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "offline_now",
+    "gold_claims": [
+      {
+        "text": "P1 supports offline_now: Leak at the seal. The leak is serious",
+        "evidence_ids": [
+          "P1"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P2 supports offline_now: Pressure is fluctuating. The pressure is unstable for",
+        "evidence_ids": [
+          "P2"
+        ],
+        "confidence": 0.9,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P3 supports offline_now: Fluid level is dropping. The level is low",
+        "evidence_ids": [
+          "P3"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      },
+      {
+        "text": "P4 supports offline_now: Safety danger is present. The danger is serious",
+        "evidence_ids": [
+          "P4"
+        ],
+        "confidence": 0.8,
+        "stance": "offline_now"
+      }
+    ]
+  },
+  {
+    "case_id": "R-01",
+    "domain": "research",
+    "question": "Does SparseAttn outperform DenseAttn on summarization?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "SparseAttn accuracy is 4.2 points better than DenseAttn on summarization. The result shows SparseAttn can outperform the baseline.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "SparseAttn F1 is 3.1 points better than DenseAttn on summarization. The F1 score shows SparseAttn is stronger.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R3",
+        "text": "Ablation confirms the gain. The ablation shows SparseAttn beats DenseAttn because of its new design.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "Only one dataset was used. A single dataset means the result for summarization is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "No significance test was run. Without a test, the claim that SparseAttn can outperform DenseAttn is weaker.",
+        "supports": "inconclusive",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_claims": [
+      {
+        "text": "R1 supports yes: SparseAttn accuracy is 4.2 points better than DenseAttn",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R2 supports yes: SparseAttn F1 is 3.1 points better than DenseAttn",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R3 supports yes: Ablation confirms the gain. The ablation shows SparseAttn",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      }
+    ]
+  },
+  {
+    "case_id": "R-02",
+    "domain": "research",
+    "question": "Does GraphRouter outperform FlatRouter on question answering?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "GraphRouter accuracy is 1.0 point better than FlatRouter on question answering. The gain is small but GraphRouter is stronger.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R2",
+        "text": "GraphRouter latency is 3 times worse than FlatRouter on question answering. The latency shows GraphRouter is weaker in practice.",
+        "supports": "no",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R3",
+        "text": "No ablation was run. Without an ablation, the result for GraphRouter on question answering is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "Two datasets were used. Two datasets show GraphRouter beats FlatRouter twice.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "FlatRouter is outdated. An outdated baseline means the comparison on question answering is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "inconclusive",
+    "gold_claims": [
+      {
+        "text": "R3 supports inconclusive: No ablation was run. Without an ablation, the",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R5 supports inconclusive: FlatRouter is outdated. An outdated baseline means the",
+        "evidence_ids": [
+          "R5"
+        ],
+        "confidence": 0.7,
+        "stance": "inconclusive"
+      }
+    ]
+  },
+  {
+    "case_id": "R-03",
+    "domain": "research",
+    "question": "Does LiteBERT outperform BERT-base on sentiment analysis?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "Replication scored 2.0 points worse than BERT-base on sentiment analysis. The replication shows LiteBERT is weaker.",
+        "supports": "no",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "The original used a different split. A different split means LiteBERT did not beat BERT-base fairly.",
+        "supports": "no",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R3",
+        "text": "Code is unavailable. Without code, the claim that LiteBERT can outperform BERT-base cannot be checked.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R4",
+        "text": "One positive anecdote exists. The anecdote shows LiteBERT beat BERT-base once on sentiment analysis.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.6
+      },
+      {
+        "id": "R5",
+        "text": "Metrics are incomparable. Incomparable metrics make the result on sentiment analysis inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "no",
+    "gold_claims": [
+      {
+        "text": "R1 supports no: Replication scored 2.0 points weaker than BERT-base on",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "no"
+      },
+      {
+        "text": "R2 supports no: The original used a different split. A different",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.8,
+        "stance": "no"
+      },
+      {
+        "text": "R3 supports no: Code is unavailable. Without code, the claim that",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.7,
+        "stance": "no"
+      }
+    ]
+  },
+  {
+    "case_id": "R-04",
+    "domain": "research",
+    "question": "Does NeuroSketch outperform SketchBase on code completion?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "NeuroSketch is 5 points better than SketchBase on dataset A. The result shows NeuroSketch can outperform the baseline.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "NeuroSketch is 3 points better than SketchBase on dataset B. The gain shows NeuroSketch is stronger.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R3",
+        "text": "NeuroSketch is 2 points better than SketchBase on dataset C. The gain shows NeuroSketch beats SketchBase again.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "Significance p is below 0.01. The test shows NeuroSketch beats SketchBase on code completion for real.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R5",
+        "text": "Compute cost is high. High cost shows NeuroSketch is weaker in practice than SketchBase.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_claims": [
+      {
+        "text": "R1 supports yes: NeuroSketch is 5 points better than SketchBase on",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R2 supports yes: NeuroSketch is 3 points better than SketchBase on",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R3 supports yes: NeuroSketch is 2 points better than SketchBase on",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      },
+      {
+        "text": "R4 supports yes: Significance p is below 0.01. The test shows",
+        "evidence_ids": [
+          "R4"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      }
+    ]
+  },
+  {
+    "case_id": "R-05",
+    "domain": "research",
+    "question": "Does TinyViT outperform ResNet-50 on image classification?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "TinyViT is 1 point better than ResNet-50 on dataset A. The gain is small for image classification.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R2",
+        "text": "TinyViT is 1 point worse than ResNet-50 on dataset B. The loss shows TinyViT is weaker there.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R3",
+        "text": "Only 30 samples were used. A small sample means the result on image classification is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "No error bars were reported. Without error bars, the claim that TinyViT can outperform ResNet-50 is weaker.",
+        "supports": "inconclusive",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R5",
+        "text": "This is a pilot study. A pilot study means the result on image classification is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "inconclusive",
+    "gold_claims": [
+      {
+        "text": "R3 supports inconclusive: Only 30 samples were used. A small sample",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R4 supports inconclusive: No error bars were reported. Without error bars,",
+        "evidence_ids": [
+          "R4"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R5 supports inconclusive: This is a pilot study. A pilot study",
+        "evidence_ids": [
+          "R5"
+        ],
+        "confidence": 0.7,
+        "stance": "inconclusive"
+      }
+    ]
+  },
+  {
+    "case_id": "R-06",
+    "domain": "research",
+    "question": "Does EchoLM outperform BaseLM on dialogue generation?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "EchoLM accuracy is 6 points worse than BaseLM on dialogue generation. The result shows EchoLM is weaker.",
+        "supports": "no",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "EchoLM is slower than BaseLM. Being slower shows EchoLM is weaker in practice.",
+        "supports": "no",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R3",
+        "text": "EchoLM has more parameters than BaseLM. More parameters show EchoLM is weaker for dialogue generation.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R4",
+        "text": "One niche win exists. The win shows EchoLM beat BaseLM once on dialogue generation.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.6
+      },
+      {
+        "id": "R5",
+        "text": "The authors agree. The authors show EchoLM is weaker than BaseLM.",
+        "supports": "no",
+        "weight": 0.5,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "no",
+    "gold_claims": [
+      {
+        "text": "R1 supports no: EchoLM accuracy is 6 points weaker than BaseLM",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "no"
+      },
+      {
+        "text": "R2 supports no: EchoLM is slower than BaseLM. Being slower shows",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.8,
+        "stance": "no"
+      },
+      {
+        "text": "R3 supports no: EchoLM has more parameters than BaseLM. More parameters",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.7,
+        "stance": "no"
+      }
+    ]
+  },
+  {
+    "case_id": "R-07",
+    "domain": "research",
+    "question": "Does FastRank outperform BM25 on passage retrieval?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "FastRank F1 is 4 points better than BM25 on passage retrieval. The F1 score shows FastRank is stronger.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "Accuracy is equal. Equal accuracy means the result on passage retrieval is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R3",
+        "text": "FastRank recall is 6 points better than BM25. The recall shows FastRank beats BM25.",
+        "supports": "yes",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "FastRank precision is 1 point worse than BM25. Lower precision shows FastRank is weaker there.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "Two datasets agree. Two datasets show FastRank beats BM25 on passage retrieval.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_claims": [
+      {
+        "text": "R1 supports yes: FastRank F1 is 4 points better than BM25",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R3 supports yes: FastRank recall is 6 points better than BM25.",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      },
+      {
+        "text": "R5 supports yes: Two datasets agree. Two datasets indicate FastRank beats",
+        "evidence_ids": [
+          "R5"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      }
+    ]
+  },
+  {
+    "case_id": "R-08",
+    "domain": "research",
+    "question": "Does CalibNet outperform Platt on confidence calibration?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "CalibNet reports 91 percent alone. Reporting alone means the result on confidence calibration is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R2",
+        "text": "No baseline was run. Without Platt, the claim that CalibNet can outperform anything is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R3",
+        "text": "The method is novel. A novel method shows CalibNet is stronger in design.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R4",
+        "text": "The dataset is private. A private dataset means the result on confidence calibration is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "The paper claims state of the art. The claim shows CalibNet beats Platt on confidence calibration.",
+        "supports": "yes",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "inconclusive",
+    "gold_claims": [
+      {
+        "text": "R1 supports inconclusive: CalibNet reports 91 percent alone. Reporting alone means",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R2 supports inconclusive: No baseline was run. Without Platt, the claim",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R4 supports inconclusive: The dataset is private. A private dataset means",
+        "evidence_ids": [
+          "R4"
+        ],
+        "confidence": 0.7,
+        "stance": "inconclusive"
+      }
+    ]
+  },
+  {
+    "case_id": "R-09",
+    "domain": "research",
+    "question": "Does SparseAttn-v2 outperform DenseAttn on summarization?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "SparseAttn-v2 accuracy is 4.2 points better than DenseAttn on summarization. The result shows SparseAttn-v2 can outperform the baseline.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "SparseAttn-v2 F1 is 3.1 points better than DenseAttn on summarization. The F1 score shows SparseAttn-v2 is stronger.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R3",
+        "text": "Ablation confirms the gain. The ablation shows SparseAttn-v2 beats DenseAttn because of its new design.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "Only one dataset was used. A single dataset means the result for summarization is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "No significance test was run. Without a test, the claim that SparseAttn-v2 can outperform DenseAttn is weaker.",
+        "supports": "inconclusive",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_claims": [
+      {
+        "text": "R1 supports yes: SparseAttn-v2 accuracy is 4.2 points better than DenseAttn",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R2 supports yes: SparseAttn-v2 F1 is 3.1 points better than DenseAttn",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R3 supports yes: Ablation confirms the gain. The ablation shows SparseAttn-v2",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      }
+    ]
+  },
+  {
+    "case_id": "R-10",
+    "domain": "research",
+    "question": "Does GraphRouter-v2 outperform FlatRouter on question answering?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "GraphRouter-v2 accuracy is 1.0 point better than FlatRouter on question answering. The gain is small but GraphRouter-v2 is stronger.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R2",
+        "text": "GraphRouter-v2 latency is 3 times worse than FlatRouter on question answering. The latency shows GraphRouter-v2 is weaker in practice.",
+        "supports": "no",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R3",
+        "text": "No ablation was run. Without an ablation, the result for GraphRouter-v2 on question answering is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "Two datasets were used. Two datasets show GraphRouter-v2 beats FlatRouter twice.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "FlatRouter is outdated. An outdated baseline means the comparison on question answering is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "inconclusive",
+    "gold_claims": [
+      {
+        "text": "R3 supports inconclusive: No ablation was run. Without an ablation, the",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R5 supports inconclusive: FlatRouter is outdated. An outdated baseline means the",
+        "evidence_ids": [
+          "R5"
+        ],
+        "confidence": 0.7,
+        "stance": "inconclusive"
+      }
+    ]
+  },
+  {
+    "case_id": "R-11",
+    "domain": "research",
+    "question": "Does LiteBERT-v2 outperform BERT-base on sentiment analysis?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "Replication scored 2.0 points worse than BERT-base on sentiment analysis. The replication shows LiteBERT-v2 is weaker.",
+        "supports": "no",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "The original used a different split. A different split means LiteBERT-v2 did not beat BERT-base fairly.",
+        "supports": "no",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R3",
+        "text": "Code is unavailable. Without code, the claim that LiteBERT-v2 can outperform BERT-base cannot be checked.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R4",
+        "text": "One positive anecdote exists. The anecdote shows LiteBERT-v2 beat BERT-base once on sentiment analysis.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.6
+      },
+      {
+        "id": "R5",
+        "text": "Metrics are incomparable. Incomparable metrics make the result on sentiment analysis inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "no",
+    "gold_claims": [
+      {
+        "text": "R1 supports no: Replication scored 2.0 points weaker than BERT-base on",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "no"
+      },
+      {
+        "text": "R2 supports no: The original used a different split. A different",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.8,
+        "stance": "no"
+      },
+      {
+        "text": "R3 supports no: Code is unavailable. Without code, the claim that",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.7,
+        "stance": "no"
+      }
+    ]
+  },
+  {
+    "case_id": "R-12",
+    "domain": "research",
+    "question": "Does NeuroSketch-v2 outperform SketchBase on code completion?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "NeuroSketch-v2 is 5 points better than SketchBase on dataset A. The result shows NeuroSketch-v2 can outperform the baseline.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "NeuroSketch-v2 is 3 points better than SketchBase on dataset B. The gain shows NeuroSketch-v2 is stronger.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R3",
+        "text": "NeuroSketch-v2 is 2 points better than SketchBase on dataset C. The gain shows NeuroSketch-v2 beats SketchBase again.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "Significance p is below 0.01. The test shows NeuroSketch-v2 beats SketchBase on code completion for real.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R5",
+        "text": "Compute cost is high. High cost shows NeuroSketch-v2 is weaker in practice than SketchBase.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_claims": [
+      {
+        "text": "R1 supports yes: NeuroSketch-v2 is 5 points better than SketchBase on",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R2 supports yes: NeuroSketch-v2 is 3 points better than SketchBase on",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R3 supports yes: NeuroSketch-v2 is 2 points better than SketchBase on",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      },
+      {
+        "text": "R4 supports yes: Significance p is below 0.01. The test shows",
+        "evidence_ids": [
+          "R4"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      }
+    ]
+  },
+  {
+    "case_id": "R-13",
+    "domain": "research",
+    "question": "Does TinyViT-v2 outperform ResNet-50 on image classification?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "TinyViT-v2 is 1 point better than ResNet-50 on dataset A. The gain is small for image classification.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R2",
+        "text": "TinyViT-v2 is 1 point worse than ResNet-50 on dataset B. The loss shows TinyViT-v2 is weaker there.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R3",
+        "text": "Only 30 samples were used. A small sample means the result on image classification is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "No error bars were reported. Without error bars, the claim that TinyViT-v2 can outperform ResNet-50 is weaker.",
+        "supports": "inconclusive",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R5",
+        "text": "This is a pilot study. A pilot study means the result on image classification is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "inconclusive",
+    "gold_claims": [
+      {
+        "text": "R3 supports inconclusive: Only 30 samples were used. A small sample",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R4 supports inconclusive: No error bars were reported. Without error bars,",
+        "evidence_ids": [
+          "R4"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R5 supports inconclusive: This is a pilot study. A pilot study",
+        "evidence_ids": [
+          "R5"
+        ],
+        "confidence": 0.7,
+        "stance": "inconclusive"
+      }
+    ]
+  },
+  {
+    "case_id": "R-14",
+    "domain": "research",
+    "question": "Does EchoLM-v2 outperform BaseLM on dialogue generation?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "EchoLM-v2 accuracy is 6 points worse than BaseLM on dialogue generation. The result shows EchoLM-v2 is weaker.",
+        "supports": "no",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "EchoLM-v2 is slower than BaseLM. Being slower shows EchoLM-v2 is weaker in practice.",
+        "supports": "no",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R3",
+        "text": "EchoLM-v2 has more parameters than BaseLM. More parameters show EchoLM-v2 is weaker for dialogue generation.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R4",
+        "text": "One niche win exists. The win shows EchoLM-v2 beat BaseLM once on dialogue generation.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.6
+      },
+      {
+        "id": "R5",
+        "text": "The authors agree. The authors show EchoLM-v2 is weaker than BaseLM.",
+        "supports": "no",
+        "weight": 0.5,
+        "strength": 0.7
+      }
+    ],
+    "gold_answer": "no",
+    "gold_claims": [
+      {
+        "text": "R1 supports no: EchoLM-v2 accuracy is 6 points weaker than BaseLM",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "no"
+      },
+      {
+        "text": "R2 supports no: EchoLM-v2 is slower than BaseLM. Being slower shows",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.8,
+        "stance": "no"
+      },
+      {
+        "text": "R3 supports no: EchoLM-v2 has more parameters than BaseLM. More parameters",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.7,
+        "stance": "no"
+      }
+    ]
+  },
+  {
+    "case_id": "R-15",
+    "domain": "research",
+    "question": "Does FastRank-v2 outperform BM25 on passage retrieval?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "FastRank-v2 F1 is 4 points better than BM25 on passage retrieval. The F1 score shows FastRank-v2 is stronger.",
+        "supports": "yes",
+        "weight": 2.0,
+        "strength": 0.9
+      },
+      {
+        "id": "R2",
+        "text": "Accuracy is equal. Equal accuracy means the result on passage retrieval is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R3",
+        "text": "FastRank-v2 recall is 6 points better than BM25. The recall shows FastRank-v2 beats BM25.",
+        "supports": "yes",
+        "weight": 1.5,
+        "strength": 0.8
+      },
+      {
+        "id": "R4",
+        "text": "FastRank-v2 precision is 1 point worse than BM25. Lower precision shows FastRank-v2 is weaker there.",
+        "supports": "no",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "Two datasets agree. Two datasets show FastRank-v2 beats BM25 on passage retrieval.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.8
+      }
+    ],
+    "gold_answer": "yes",
+    "gold_claims": [
+      {
+        "text": "R1 supports yes: FastRank-v2 F1 is 4 points better than BM25",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.9,
+        "stance": "yes"
+      },
+      {
+        "text": "R3 supports yes: FastRank-v2 recall is 6 points better than BM25.",
+        "evidence_ids": [
+          "R3"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      },
+      {
+        "text": "R5 supports yes: Two datasets agree. Two datasets indicate FastRank-v2 beats",
+        "evidence_ids": [
+          "R5"
+        ],
+        "confidence": 0.8,
+        "stance": "yes"
+      }
+    ]
+  },
+  {
+    "case_id": "R-16",
+    "domain": "research",
+    "question": "Does CalibNet-v2 outperform Platt on confidence calibration?",
+    "evidence": [
+      {
+        "id": "R1",
+        "text": "CalibNet-v2 reports 91 percent alone. Reporting alone means the result on confidence calibration is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R2",
+        "text": "No baseline was run. Without Platt, the claim that CalibNet-v2 can outperform anything is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 2.0,
+        "strength": 0.8
+      },
+      {
+        "id": "R3",
+        "text": "The method is novel. A novel method shows CalibNet-v2 is stronger in design.",
+        "supports": "yes",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R4",
+        "text": "The dataset is private. A private dataset means the result on confidence calibration is inconclusive.",
+        "supports": "inconclusive",
+        "weight": 1.0,
+        "strength": 0.7
+      },
+      {
+        "id": "R5",
+        "text": "The paper claims state of the art. The claim shows CalibNet-v2 beats Platt on confidence calibration.",
+        "supports": "yes",
+        "weight": 0.5,
+        "strength": 0.6
+      }
+    ],
+    "gold_answer": "inconclusive",
+    "gold_claims": [
+      {
+        "text": "R1 supports inconclusive: CalibNet-v2 reports 91 percent alone. Reporting alone means",
+        "evidence_ids": [
+          "R1"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R2 supports inconclusive: No baseline was run. Without Platt, the claim",
+        "evidence_ids": [
+          "R2"
+        ],
+        "confidence": 0.8,
+        "stance": "inconclusive"
+      },
+      {
+        "text": "R4 supports inconclusive: The dataset is private. A private dataset means",
+        "evidence_ids": [
+          "R4"
+        ],
+        "confidence": 0.7,
+        "stance": "inconclusive"
+      }
+    ]
+  }
+]
