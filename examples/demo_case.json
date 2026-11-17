@@ -1,0 +1,69 @@
+{
+  "case_id": "H-01",
+  "domain": "health",
+  "question": "Should patient Aisha be escalated to urgent care?",
+  "evidence": [
+    {
+      "id": "H1",
+      "text": "Temperature 39.2C. This is a high fever for patient Aisha, and the risk is severe.",
+      "supports": "escalate",
+      "weight": 2.0,
+      "strength": 0.9
+    },
+    {
+      "id": "H2",
+      "text": "Urgent care review: heart rate 124 bpm. Patient Aisha has a high heart rate, and the risk is severe.",
+      "supports": "escalate",
+      "weight": 2.0,
+      "strength": 0.9
+    },
+    {
+      "id": "H3",
+      "text": "Patient Aisha reports a severe headache. The headache is severe and the patient should be checked.",
+      "supports": "escalate",
+      "weight": 1.0,
+      "strength": 0.8
+    },
+    {
+      "id": "H4",
+      "text": "Patient Aisha has a history of asthma. Asthma should be monitored, so the patient needs watching.",
+      "supports": "monitor",
+      "weight": 1.0,
+      "strength": 0.7
+    },
+    {
+      "id": "H5",
+      "text": "Patient Aisha feels slightly better today. The fever is high but the patient feels better.",
+      "supports": "routine",
+      "weight": 0.5,
+      "strength": 0.6
+    }
+  ],
+  "gold_answer": "escalate",
+  "gold_claims": [
+    {
+      "text": "H1 supports escalate: heat 39.2C. This is a elevated fever for",
+      "evidence_ids": [
+        "H1"
+      ],
+      "confidence": 0.9,
+      "stance": "escalate"
+    },
+    {
+      "text": "H2 supports escalate: immediate care review: heart rate 124 bpm. patient",
+      "evidence_ids": [
+        "H2"
+      ],
+      "confidence": 0.9,
+      "stance": "escalate"
+    },
+    {
+      "text": "H3 supports escalate: patient Aisha reports a serious headache. The headache",
+      "evidence_ids": [
+        "H3"
+      ],
+      "confidence": 0.8,
+      "stance": "escalate"
+    }
+  ]
+}
